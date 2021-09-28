@@ -21,6 +21,7 @@ namespace ConsoleApp6
                 if (!(numberGiven >= 1 && numberGiven <= 100))
                 {
                     Console.WriteLine("Please try again "+name+", number was not in the acceptable range.");
+                    continue;
                 }
                 else
                 {
@@ -47,7 +48,7 @@ namespace ConsoleApp6
                 Console.WriteLine("Continue? Type n to quit or press any key to try again.");
                 string repeatAnswer = Console.ReadLine();
                 //ends the loop only if n is typed
-                if (repeatAnswer == "n")
+                if (repeatAnswer.ToLower() == "n")
                 {
                     keepGoing = false;
                     Console.WriteLine("Goodbye "+name+"! Press any key to quit.");
